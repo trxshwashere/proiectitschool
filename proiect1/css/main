@@ -1,0 +1,267 @@
+
+:root {
+    --text-primary: #101d42;
+    --text-secondary: #fbb44c;
+    --text-dark: #2b2922;
+    --text-light: #eaeaea;
+    --text-white: #ffffff;
+  
+    --bg-primary: #141e4c;
+    --bg-secondary: #dfedf5;
+    --bg-dark: #101d42;
+    --bg-light: #ffffff;
+  
+    --button-color: #2bb686;
+  
+    --fs-large: 16px;
+    --fs-medium: 14px;
+    --fs-small: 12px;
+  
+    --spacing-xl: 42px;
+    --spacing-large: 28px;
+    --spacing-medium: 16px;
+    --spacing-small: 8px;
+    --spacing-tiny: 4px;
+  
+    --mobile-logo-height: 45px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  body,
+  h2,
+  h1,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+  }
+  
+  nav {
+    background-color: var(--bg-primary);
+    /* margin-top: 200px; */
+    display: block;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    height: 97px;
+  }
+  
+  nav .logo-link {
+    padding: 0;
+  }
+  
+  nav a {
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: var(--spacing-medium);
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  
+  a:-webkit-any-link {
+    cursor: pointer;
+  }
+  
+  nav img {
+    width: auto;
+    height: 60px;
+  }
+  
+  div {
+    display: block;
+  }
+  
+  nav .menu-icon {
+    color: var(--text-light);
+    display: none;
+  }
+  
+  .material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  
+  nav input[type="checkbox"] {
+    display: none;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+  }
+  
+  nav li {
+    position: relative;
+  }
+  
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+  
+  nav .arrow-down-icon {
+    font-size: var(--fs-large);
+    position: absolute;
+  }
+  
+  nav .submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-dark);
+    width: 160px;
+    padding: var(--spacing-tiny) 0;
+    left: var(--spacing-medium);
+    z-index: 3;
+  }
+  
+  nav a:hover {
+    color: var(--text-secondary);
+  }
+  
+  nav .submenu a {
+    padding: var(--spacing-tiny) var(--spacing-small);
+  }
+  
+  .about-us:hover .submenu {
+    display: block;
+  }
+  
+  /*Mobile*/
+  @media (max-width: 768px) {
+    nav img {
+      height: var(--mobile-logo-height);
+    }
+  
+    nav .menu-icon {
+      display: block;
+    }
+  
+    nav ul {
+      display: none;
+    }
+  
+    nav .arrow-down-icon {
+      display: none;
+    }
+  
+    nav .about-us:hover .submenu {
+      display: none;
+    }
+  
+    nav .menu-icon-container {
+      position: relative;
+      margin-top: 20px;
+    }
+  
+    nav input[type="checkbox"] {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+  
+    nav input[type="checkbox"]:checked ~ ul {
+      display: block;
+      width: 100%;
+      position: fixed;
+      top: calc(var(--mobile-logo-height)+ 2 * var(--spacing-medium));
+      left: 0;
+      background-color: var(--bg-dark);
+    }
+    li {
+      position: absolute;
+      left: -40px;
+      top: 1px;
+    }
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: var(--spacing-large);
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  
+  footer {
+    display: grid;
+    position: relative;
+    background-color: var(--bg-dark);
+    height: 82px;
+    margin-top: 42px;
+  }
+  
+  p {
+    font-size: var(--fs-medium);
+  }
+  
+  footer p {
+    font-size: var(--fs-small);
+    color: var(--bg-light);
+  }
+  .grid {
+    display: grid;
+  }
+  
+  .container-part {
+    display: grid;
+  }
+  
